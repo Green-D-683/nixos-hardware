@@ -27,6 +27,11 @@ stdenvNoCC.mkDerivation {
 
   sourceRoot = ".";
 
+  patchphase = ''
+    echo "ccode=GB" >> $NIX_BUILD_TOP/firmware-nonfree/debian/config/brcm80211/brcm/brcmfmac43455-sdio.txt
+    echo "regrev=0" >> $NIX_BUILD_TOP/firmware-nonfree/debian/config/brcm80211/brcm/brcmfmac43455-sdio.txt
+  '';
+
   dontBuild = true;
   # Firmware blobs do not need fixing and should not be modified
   dontFixup = true;
