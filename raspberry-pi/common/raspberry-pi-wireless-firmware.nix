@@ -28,7 +28,7 @@ stdenvNoCC.mkDerivation {
   sourceRoot = ".";
 
   patchphase = ''
-    echo "ccode=GB" >> $NIX_BUILD_TOP/firmware-nonfree/debian/config/brcm80211/brcm/brcmfmac43455-sdio.txt
+    echo "ccode=0" >> $NIX_BUILD_TOP/firmware-nonfree/debian/config/brcm80211/brcm/brcmfmac43455-sdio.txt
     echo "regrev=0" >> $NIX_BUILD_TOP/firmware-nonfree/debian/config/brcm80211/brcm/brcmfmac43455-sdio.txt
   '';
 
